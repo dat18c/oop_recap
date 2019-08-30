@@ -1,5 +1,8 @@
 package com.kea.ooprecap;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -20,7 +23,22 @@ public class Main {
         System.out.println(p);
         */
 
-        
+        List<Machine> machines = new ArrayList<>();
+        machines.add(new Printer());
+        machines.add(new Radio());
+        machines.add(new Machine());
 
+        //iterer
+        for (Machine ma: machines) {
+            //tænd
+            ma.turnOn();
+            System.out.println(ma);
+
+            //hvis Printer, så print
+            if (ma instanceof Printer)
+            {
+                ((Printer) ma).print("Hej - tid for opgave!", 5);
+            }
+        }
     }
 }
