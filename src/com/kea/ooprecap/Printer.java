@@ -1,6 +1,7 @@
 package com.kea.ooprecap;
 
-public class Printer {
+public class Printer extends Machine
+{
 
     //udskriftmetode
     public void print(String text, int count)
@@ -12,6 +13,6 @@ public class Printer {
             System.out.println(text);
         }
 
-        
+
     }
 }
